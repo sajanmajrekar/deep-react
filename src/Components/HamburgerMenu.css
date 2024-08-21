@@ -1,0 +1,128 @@
+/* src/Header.css */
+.header {
+  position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    border-bottom: 1px groove #00000045;
+    z-index: 111;
+    background: transparent;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    background: black;
+}
+  
+  .hamburger-button {
+    background: #FFB646;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    row-gap: 6px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: black;
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 100vh;
+    padding-left: 2rem;
+
+  }
+  
+  .menu.open {
+    display: block;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 88%;
+  }
+  
+  .menu li:hover span {
+    animation: moveUp 0.8s linear;
+  }
+  
+  .menu li a {
+    display: flex;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px groove #80808080;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  
+.menu li a:hover {
+  color: #FFB646;
+}
+  
+  .hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  button.hamburger-button.close {
+    right: 0%;
+
+}
+
+.openmenu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+}
+@keyframes moveUp {
+0% {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px) scale(1);
+}
+25% {
+  opacity: 0;
+  transform: translateX(10px) translateY(-10px) scale(0.9);
+}
+26% {
+  opacity: 0;
+  transform: translateX(-10px) translateY(10px) scale(0.9);
+}
+55% {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px) scale(1);
+}
+}
+img.brandlogo {
+  width: 95px;
+  height: 32px;
+}
